@@ -38,32 +38,26 @@ class TicTacToe
   end
   
  def turn_count
-      turn = 0
-  @board.each do |index|
-    if index == "X" || index == "O"
-      turn += 1
-    end
+    @board.count { |player_move| player_move == "X" || player_move == "O" }
   end
-  return turn
-end
-
   
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
   end
   
- def turn
-    puts "Please enter 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
-    char = current_player
+  def turn
+    puts "Enter a position between 1-9"
+    user_input = gets.chomp
+    index = input_to_index(user_input)
+    choice = current_player
+    
     if valid_move?(index)
-      move(index, char)
+      move(index, choice)
       display_board
-    else
+    else 
       turn
     end
-end
+  end
   
   def won?
   WIN_COMBINATIONS.each {|win_combo|
@@ -109,7 +103,6 @@ end
     end
   end
 end
-
 
 def play
   while over? == false
