@@ -43,14 +43,8 @@ def position_taken?(index)
   end
 
 def turn_count
-  turn = 0
-  @board.each do |index|
-    if index == "X" || index == "O"
-      turn += 1
-    end
+    @board.count { |player_move| player_move == "X" || player_move == "O" }
   end
-  return turn
-end
 
 def current_player
   #if the turn count is an even number, that means O just went, so the next/current player is X
