@@ -42,7 +42,7 @@ class TicTacToe
   end
   
   def current_player
-    @board.each do {|move| turn_count
+    @board.each do {|move| turn_count}
   end
   
   # def turn
