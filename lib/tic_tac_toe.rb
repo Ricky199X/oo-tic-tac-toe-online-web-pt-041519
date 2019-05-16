@@ -78,6 +78,8 @@ class TicTacToe
   return false
   end
   
-  
+  def full?
+    @board.all? {}
+  end
   
 end
