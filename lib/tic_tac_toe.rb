@@ -107,8 +107,6 @@ end
 def play 
   until over? == true
     turn
-  else 
-    
 end
   
 end
