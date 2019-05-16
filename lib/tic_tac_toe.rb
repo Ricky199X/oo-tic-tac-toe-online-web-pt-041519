@@ -60,8 +60,8 @@ end
     if valid_move?(index)
       move(index, choice)
       display_board
-    # else 
-    #   turn
+    else 
+      turn
     end
   end
   
