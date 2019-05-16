@@ -31,8 +31,12 @@ def move(index, token = "X")
 end
 
 def position_taken?(index)
-  !(@board[index].nil? || @board[index] == " ")
-end
+    if @board[index] == " "
+      return false
+    else 
+      true
+    end
+  end 
 
 def valid_move?(index)
   index.between?(0,8) && !position_taken?(index)
