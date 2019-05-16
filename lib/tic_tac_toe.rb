@@ -46,7 +46,7 @@ class TicTacToe
   end
   
   def turn
-    puts "Enter a position between 1-9"
+    puts "Enter a position between 1-9:"
     user_input = gets.chomp
     index = input_to_index(user_input)
     choice = current_player
