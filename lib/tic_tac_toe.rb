@@ -53,18 +53,17 @@ end
   end
   
   def turn
-    puts "Enter a position between 1-9"
-    user_input = gets.chomp
-    index = input_to_index(user_input)
-    choice = current_player
-    
-    if valid_move?(index)
-      move(index, choice)
-      display_board
-    else 
-      turn
-    end
+  puts "Please choose a number 1-9:"
+  user_input = gets.chomp
+  index = input_to_index(user_input)
+  if valid_move?(index)
+    player_token = current_player
+    move(index, player_token)
+    display_board
+  else
+    turn
   end
+end
   
   def won?
   WIN_COMBINATIONS.each {|win_combo|
