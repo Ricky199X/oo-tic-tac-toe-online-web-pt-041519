@@ -45,15 +45,15 @@ class TicTacToe
     turn_count % 2 == 0 ? "X" : "O"
   end
   
-  # def turn
-  #   puts "Enter a position between 1-9"
-  #   user_input = gets.chomp
-  #   input_to_index(user_input)
+  def turn
+    puts "Enter a position between 1-9"
+    user_input = gets.chomp
+    input_to_index(user_input)
     
-  #   if valid_move?
-  #     move(user_input)
-  #   else 
-  #     turn
-  #   end
-  # end
+    if valid_move?
+      move(user_input)
+    else 
+      turn
+    end
+  end
 end
