@@ -38,8 +38,15 @@ class TicTacToe
   end
   
  def turn_count
-    @board.count { |player_move| player_move == "X" || player_move == "O" }
+      turn = 0
+  @board.each do |index|
+    if index == "X" || index == "O"
+      turn += 1
+    end
   end
+  return turn
+end
+
   
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
