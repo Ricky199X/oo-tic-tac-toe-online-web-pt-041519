@@ -41,9 +41,9 @@ class TicTacToe
     @board.count { |player_move| player_move == "X" || player_move == "O" }
   end
   
-  def current_player
-    @board.each do {|move| turn_count}
-  end
+  # def current_player
+  #   @board.each do {|move| turn_count}
+  # end
   
   # def turn
   #   puts "Enter a position between 1-9"
