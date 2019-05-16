@@ -48,7 +48,11 @@ def turn_count
 
 def current_player
   total_turns = turn_count
-  total_turns % 2 == 0 ? player == "X" : player == "O"
+  if total_turns % 2 == 0
+    player = "X"
+  else
+    player = "O"
+  end
   return player
 end
 
