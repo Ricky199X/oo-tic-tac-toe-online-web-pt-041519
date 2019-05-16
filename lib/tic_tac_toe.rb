@@ -58,4 +58,8 @@ class TicTacToe
       turn
     end
   end
+  
+  def won?
+    @board.each {||}
+  end
 end
