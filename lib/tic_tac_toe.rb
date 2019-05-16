@@ -53,7 +53,7 @@ def current_player
   else
     player = "O"
   end
-  return player
+    player
 end
 
 def turn
