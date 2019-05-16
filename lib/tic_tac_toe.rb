@@ -52,7 +52,7 @@ class TicTacToe
     choice = current_player
     
     if valid_move?(index)
-      move(user_input)
+      move(index, choice)
     else 
       turn
     end
